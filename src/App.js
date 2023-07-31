@@ -2,7 +2,7 @@
 import './App.css';
 
 
-import Mainpage from './components/Mainpage';
+import Mainpage from './FrontEnd/Mainpage';
 function App() {
   return (
     <div className="App">
