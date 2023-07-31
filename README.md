@@ -7,7 +7,7 @@ AffordMed Interview Round - FullStack
 ### SCREENSHOT DESCRIPTION OF THE DEVEOPMENT
 
 ####CREATE NEW REPO
-https://github.com/rey-arx/20euit083/blob/main/ScreenShots/repo%20created.png
+![alt text](https://github.com/rey-arx/20euit083/blob/main/ScreenShots/repo%20created.png)
 
 #### REGISTERING THE COMPANY WITH JOHN DOE RAILWAY SERVER
 https://github.com/rey-arx/20euit083/blob/main/ScreenShots/Registring%20company.png
