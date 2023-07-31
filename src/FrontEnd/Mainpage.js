@@ -5,9 +5,6 @@ function Mainpage() {
   const [trainData, setTrainData] = useState([]);
 
   
-//   useEffect(() => {
-//     fetchTrainData();
-//   }, []);
 
   const getTrainData = async () => {
     try {
@@ -42,4 +39,31 @@ const disptrain = () =>{
     </div>
   );
 }
+
+// useEffect(() => {
+//     fetch('http://localhost:5000/api/data')
+//       .then(response => response.json())
+//       .then(data => setTrainData(data))
+//       .catch(error => console.error('Error fetching data:', error));
+//   }, []);
+
+//   const formatTime = (timeObject) => {
+//     return `${timeObject.Hours}:${timeObject.Minutes}:${timeObject.Seconds}`;
+//   };
+
+//   return (
+//     <div>
+//       <h1>Train Information</h1>
+//       <ul>
+//         {trainData.map(train => (
+//           <li key={train.id}>
+//             {train.trainName} - Departure Time: {formatTime(train.departureTime)}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+
 export default Mainpage;

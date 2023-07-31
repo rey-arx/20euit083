@@ -6,11 +6,13 @@ const app = express();
 app.use(express.json())
 const axios = require('axios');
 const { useState } = require('react');
-
+const cors = require('cors');
 var bearertoken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA4MDUxNTQsImNvbXBhbnlOYW1lIjoiUmFpaGFuIFJhaWx3YXkgTmV0d29ya3MiLCJjbGllbnRJRCI6ImZjMDQ2NDdjLTk1YTItNGEyZS1hNzI1LTI3YWU3Zjk5ZGY0NyIsIm93bmVyTmFtZSI6IiIsIm93bmVyRW1haWwiOiIiLCJyb2xsTm8iOiIyMGV1aXQwODMifQ.mHk0jU1oJWv07O5LJlKvkz2WcN32bDTH3uh9Pp_Zll4";
 const jsonData1 =[];
 const trainserverurl = "http://20.244.56.144/train/trains";
 const resultData =[{}];
+app.use(cors());
+
 // const companydata = [
 //     {
     //         "companyName": "Raihan Railway Networks",
