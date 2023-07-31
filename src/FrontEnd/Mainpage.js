@@ -17,14 +17,46 @@ function Mainpage() {
 const disptrain = () =>{
     console.log("hi")
 }
+// useEffect(() => {
+//     fetchTrainData();
+//   }, []);
+
+// const fetchTrainData = async () => {
+    
+//     //   const response = await axios.get('http://localhost:5000/api/train-schedule');
+//       const data =trainData;
+//       // Sort the data based on the required criteria
+//       const sortedData = data.sort((a, b) => {
+//         // Ascending order of price
+//         if (a.price.sleeper !== b.price.sleeper) {
+//           return a.price.sleeper - b.price.sleeper;
+//         }
+
+//         // Descending order of tickets (seats available)
+//         if (a.seatsAvailable.sleeper !== b.seatsAvailable.sleeper) {
+//           return b.seatsAvailable.sleeper - a.seatsAvailable.sleeper;
+//         }
+
+//         // Descending order of departure time (after considering delays in minutes)
+//         const aDepartureTime = new Date(a.departureTime.Hours, a.departureTime.Minutes);
+//         const aDelayedDepartureTime = new Date(aDepartureTime.getTime() + a.delayedBy * 60000);
+
+//         const bDepartureTime = new Date(b.departureTime.Hours, b.departureTime.Minutes);
+//         const bDelayedDepartureTime = new Date(bDepartureTime.getTime() + b.delayedBy * 60000);
+
+//         return bDelayedDepartureTime - aDelayedDepartureTime;
+//       });
+
+//       setTrainData(sortedData);
+    
+//   };
 
   return (
     <div>
       <h1>Real-time Train Schedule</h1>
-      <p>hi data</p>
-      <button onClick={getTrainData}>click me</button>
+      <button onClick={getTrainData}>click me to get train details</button>
       <button onClick={disptrain}>clk</button>
-      <ul>
+      <ol>
         {trainData.map((train) => (
           <li key={train.trainNumber}>
             <strong>Train Name:</strong> {train.trainName} ({train.trainNumber}) <br />
@@ -35,7 +67,7 @@ const disptrain = () =>{
             <hr />
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }
